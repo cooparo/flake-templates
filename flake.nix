@@ -7,12 +7,13 @@
 
   outputs = { self, ... }: {
     templates = {
-    defaultTemplate = self.templates.basic;
 
      basic = {
         path = ./basic;
         description = "Basic template";
       };
+
+      default = self.templates.basic;
     };
   };
 }
