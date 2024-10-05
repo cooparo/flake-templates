@@ -1,5 +1,5 @@
 {
-  description = "A very basic flake";
+  description = "Python development flake";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
@@ -12,14 +12,12 @@
   {
     devShells."x86_64-linux".default = pkgs.mkShellNoCC {
       packages = with pkgs; [
-
+	python312.withPackages (ps: with ps;[
+	  # Python 3.12 packages
+	])
       ];
 
       inputsFrom = [];
-
-      shellHook = ''
-	
-      '';
     };
   };
 }

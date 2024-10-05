@@ -4,9 +4,13 @@
   outputs = { self, ... }: {
     templates = {
 
-     basic = {
+      basic = {
         path = ./basic;
         description = "Basic template";
+      };
+    python = {
+        path = ./python;
+        description = "Python template";
       };
 
     };
