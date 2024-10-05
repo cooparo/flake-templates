@@ -1,10 +1,6 @@
 {
   description = "Paro's flake templates";
 
-  inputs = {
-    official-templates.url = "github:NixOS/templates";
-  };
-
   outputs = { self, ... }: {
     templates = {
 
@@ -13,7 +9,7 @@
         description = "Basic template";
       };
 
-      default = self.templates.basic;
     };
+    defaultTemplate = self.templates.basic;
   };
 }
