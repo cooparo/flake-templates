@@ -7,10 +7,11 @@
 
   outputs = { self, nixpkgs }: 
   let
-    pkgs = nixpkgs.legacyPackages."x86_64-linux";
+    system = "x86_64-linux";
+    pkgs = nixpkgs.legacyPackages.${system};
   in
   {
-    devShells."x86_64-linux".default = pkgs.mkShellNoCC {
+    devShells.${system}.default = pkgs.mkShellNoCC {
       packages = with pkgs; [
 
       ];
