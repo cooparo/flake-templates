@@ -18,7 +18,7 @@
           cargo
           rustc
           rustfmt
-          cargo-watch # for tests
+          bacon # background code checker
         ];
       };
     };
