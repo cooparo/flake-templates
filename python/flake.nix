@@ -26,7 +26,7 @@
     #   );
     # };
     {
-      devShells.${system}.default = pkgs.mkShellNoCC {
+      devShells.${system}.default = pkgs.mkShell {
         packages = with pkgs; [
 
           (python312.withPackages (
