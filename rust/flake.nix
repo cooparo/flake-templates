@@ -17,8 +17,10 @@
         packages = with pkgs; [
           cargo
           rustc
-          rustfmt
-          cargo-watch # for tests
+
+          rustfmt # formatter
+          bacon # background code checker
+          clippy # linter
         ];
       };
     };
